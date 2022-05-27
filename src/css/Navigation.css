@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@500&family=Poppins:wght@200;300;400;500&family=Roboto:wght@300;400;500&family=Rubik:wght@300&family=Varela+Round&display=swap');
+
+.navigation img{
+    width: 130px;
+}
+
+.navigation p{
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+.navigation span{
+    color: #DDDDDD;
+}
