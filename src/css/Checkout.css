@@ -49,8 +49,8 @@
 }
 
 .item-left img{
-    width: 180px;
-    height: 220px;
+    width: 160px;
+    height: 160px;
     padding: 25px 0 20px 0;
 }
 
@@ -59,6 +59,10 @@
     flex-direction: column;
     flex: 0.65;
     font-family: 'Varela Round', sans-serif;
+}
+
+.item-right h3{
+    font-size: 1rem;
 }
 
 .item-right h4{
@@ -70,7 +74,7 @@
 
 .item-remove{
     text-align: left;
-    margin-top: -15px;
+    margin-top: -25px;
 }
 
 

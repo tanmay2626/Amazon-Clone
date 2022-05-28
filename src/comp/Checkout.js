@@ -5,6 +5,7 @@ import CartItem from './CartItem'
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { Button } from '@mui/material';
+import items from '../data/cart';
 
 const Checkout = props => {
     const total = 1321
@@ -17,8 +18,11 @@ const Checkout = props => {
         <h2>Your Shopping Cart </h2>
         <div className='checkout-wrap'>
          <div className='checkout-left'>
-           <CartItem />
-           <CartItem />
+           {items.map((item,index)=>{
+             return (
+              <CartItem key={index} name={item.product_name} rating={item.rating} price={item.price} img={item.img_url} />
+             )
+           })}
          </div>
          <div className='checkout-right'>
            {/* Todo - add total */}

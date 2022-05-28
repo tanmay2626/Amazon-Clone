@@ -8,10 +8,9 @@ const CartItem = props => {
   return (
     <div className='item-wrap'>
       <div className='item-left'>
-        <img alt='product_img' src='https://m.media-amazon.com/images/I/814jC+rODgL._AC_UY218_.jpg' />
+        <img alt='product_img' src={props.img} />
       </div>
       <div className='item-right'>
-      {/* Todo - Map CartItems */}
       <h3>{props.name}</h3>
         <h4>₹{props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}<br/>
         <Rating  name="read-only" value={props.rating} precision={0.5} readOnly />
