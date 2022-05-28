@@ -20,9 +20,9 @@ const Navigation = () => {
          <img src='https://github.com/tanmay2626/images/blob/main/amazon-logo-removebg-preview.png?raw=true' alt='logo' />
          
          <Box sx={{ marginLeft: 5 , width: 65+'%'}}>
-         <InputBase sx={{ padding:1, backgroundColor: 'white' , borderRadius: '3px 0 0 3px' , width: 90+'%', height: 45+'px' }} />
-         <IconButton sx={{ backgroundColor: '#E48900' ,padding: 0 ,borderRadius: '0 3px 3px 0' }}>
-           <SearchIcon sx={{  color: 'black', padding: 1}} />
+         <InputBase sx={{ padding:1, backgroundColor: 'white' , borderRadius: '3px 0 0 3px' , width: 90+'%', height: 35+'px' }} />
+         <IconButton sx={{ backgroundColor: '#E48900' ,marginTop: -0.4,padding: 0 ,borderRadius: '0 3px 3px 0' }}>
+           <SearchIcon sx={{  color: 'black', padding: 0.35}} />
          </IconButton>
          </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex', width: 30+'%', height: 50+'px' } }}>
@@ -33,7 +33,7 @@ const Navigation = () => {
             <p><span>Returns </span>& Orders</p>
             </Button>
             <IconButton sx={{ textTransform: 'none' }} variant="text" color="inherit">
-            <ShoppingCartOutlinedIcon sx={{ fontSize: 35 }} />
+            <ShoppingCartOutlinedIcon sx={{ fontSize: 35, color: '#DDDDDD' }} />
             <p>Cart</p>
             </IconButton>
           </Box>
