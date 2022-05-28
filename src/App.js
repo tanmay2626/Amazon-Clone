@@ -1,11 +1,12 @@
 import './css/App.css';
 import Navigation from './comp/Navigation';
+import Checkout from './comp/Checkout';
 
 function App() {
   return (
     <div className="App">
     <Navigation />
-      <h1>Hello</h1>
+    <Checkout />
     </div>
   );
 }

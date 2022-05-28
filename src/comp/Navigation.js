@@ -33,7 +33,7 @@ const Navigation = () => {
             <p><span>Returns </span>& Orders</p>
             </Button>
             <IconButton sx={{ textTransform: 'none' }} variant="text" color="inherit">
-            <ShoppingCartOutlinedIcon sx={{ fontSize: 35 }} />
+            <ShoppingCartOutlinedIcon sx={{ fontSize: 35, color: '#DDDDDD' }} />
             <p>Cart</p>
             </IconButton>
           </Box>
