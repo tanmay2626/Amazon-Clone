@@ -38,7 +38,8 @@ const Checkout = props => {
            <h5>Subtotal ({cart.length} items) : ₹{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h5>
            <FormControlLabel className='checkout-check' control={<Checkbox size='small' color='default' />} label="This order contains a gift" />
            <Button variant="contained" size='small'
-            sx={{ color: 'black', textTransform: 'none', backgroundColor: '#FBCB0A', marginTop: 2 }}>
+            sx={{ color: 'black', textTransform: 'none', 
+            backgroundColor: '#FBCB0A', marginTop: 2 , ":hover":{ backgroundColor: '#FAC213' }}}>
                 Proceed to Buy
             </Button>
          </div>
