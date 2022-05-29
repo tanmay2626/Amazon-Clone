@@ -13,7 +13,7 @@
 .home_row_a{
     margin-top: -200px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     padding: 0 15px 0 15px;
 }
@@ -21,7 +21,7 @@
 .home_row_b{
     margin-top: 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
     padding: 0 15px 0 15px;
 }
@@ -29,13 +29,14 @@
 .card-main{
     background-color: white;
     z-index: 1;
-    height: 320px;
+    height: 360px;
     border-radius: 2px;
 }
 
 .card-desc{
     margin-top: -20px;
     padding-left: 10px;
+    height: 30%;
 }
 
 .card-main h5{
@@ -50,12 +51,15 @@
 }
 
 .card-img img{
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
 }
 
 .card-img{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    margin-top: 25px;
 }
 
 .poster{
