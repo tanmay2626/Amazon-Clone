@@ -1,0 +1,46 @@
+
+.signin-box{
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo img{
+    width: 220px;
+    padding: 20px;
+}
+
+.signin-form{
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    border: solid 1px #DDDDDD;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.signin-form span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.form-wrap{
+    text-align: left;
+    padding: 10px;
+}
+
+.signin-form label{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.signin-form input{
+    width: 95%;
+    height: 25px;
+    padding: 2px;
+}
+
+.link{
+    text-decoration: none;
+}
+

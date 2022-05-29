@@ -4,6 +4,8 @@ import Navigation from './comp/Navigation';
 import Home from './comp/Home';
 import Checkout from './comp/Checkout';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SignIn from './comp/SignIn';
+import Register from './comp/Register';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Routes>
         <Route path='/' exact element={<Home />} />
         <Route path='/cart' exact element={<Checkout />} />
+        <Route path='/signin' exact element={<SignIn />} />
+        <Route path='/register' exact element={<Register />} />
       </Routes>
     </div>
     </Router>
