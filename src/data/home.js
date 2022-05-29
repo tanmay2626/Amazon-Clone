@@ -14,9 +14,6 @@ const rowA = [
         rating: 4.5,
         img_url: 'https://m.media-amazon.com/images/I/71fVoqRC0wL._AC_UY218_.jpg'
     },
-]
-
-const rowB = [
     {
         id: '81ewnfSWrrL._AC_UL320_',
         product_name: 'Yonex Nanoray Light 18i Graphite Badminton Racquet (77g, 30 lbs Tension)',
@@ -24,6 +21,9 @@ const rowB = [
         rating: 5,
         img_url: 'https://m.media-amazon.com/images/I/81ewnfSWrrL._AC_UL320_.jpg'
     },
+]
+
+const rowB = [
     {
         id: '51jTBUXhnkL._AC_UY218_',
         product_name: 'Dell New Inspiron 5418 Laptop Intel i5-11320H, 16GB DDR4, 512Gb SSD, Win 11 + MS Office 21, 14" (35.56 cms) FHD 250 Nits Display, Platinum Silver, FPR + Backlit KB (D560633WIN9S), 1.46Kgs 4.1 out of 5 stars 77',
@@ -32,11 +32,25 @@ const rowB = [
         img_url: 'https://m.media-amazon.com/images/I/51jTBUXhnkL._AC_UY218_.jpg'
     },
     {
+        id: '91YELP0WnsL._AC_UL320_',
+        product_name: 'Amazon Brand - Solimo Trance High Back Mesh Contemporary Office Chair (Black)',
+        price: 6649,
+        rating: 3.5,
+        img_url: 'https://m.media-amazon.com/images/I/91YELP0WnsL._AC_UL320_.jpg'
+    },
+    {
         id: '31Y3d2IJfxL._AC_UL320_',
         product_name: 'Nike Unisex Revolution 5 (Gs) Black/Oracle Aqua-Hyper Blue-Ghost Green Running Shoes-5.5 UK (38.5 EU) (6 Kids US) (BQ5671-011)',
         price: 2464,
         rating: 4.5,
         img_url: 'https://m.media-amazon.com/images/I/31Y3d2IJfxL._AC_UL320_.jpg'
+    },
+    {
+        id: '91FvDEE9sCL._UY679_',
+        product_name: 'American Tourister Casual Backpack',
+        price: 999,
+        rating: 4,
+        img_url: 'https://m.media-amazon.com/images/I/91FvDEE9sCL._UY679_.jpg'
     },
 ]
 
@@ -82,6 +96,20 @@ const rowC = [
         price: 2799,
         rating: 4.5,
         img_url: 'https://m.media-amazon.com/images/I/61PqVhNyKuL._AC_UY218_.jpg'
+    },
+    {
+        id: '41v8vHL+5IL._AC_UL320_',
+        product_name: 'Nutella Hazelnut Spread with Cocoa, 750g',
+        price: 704,
+        rating: 4.5,
+        img_url: 'https://m.media-amazon.com/images/I/41v8vHL+5IL._AC_UL320_.jpg'
+    },
+    {
+        id: '61bDoqhvEPL._AC_UL320_',
+        product_name: "Men's Printed Full Sleeve Slim Fit Cotton T-Shirt",
+        price: 399,
+        rating: 4,
+        img_url: 'https://m.media-amazon.com/images/I/61bDoqhvEPL._AC_UL320_.jpg'
     },
 ]
 
