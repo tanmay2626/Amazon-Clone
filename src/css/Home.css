@@ -39,6 +39,11 @@
     height: 30%;
 }
 
+.add-btn{
+    float: right;
+    position: absolute;
+}
+
 .card-main h5{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;

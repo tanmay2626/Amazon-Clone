@@ -14,7 +14,7 @@ const Home = props => {
         <div className='home_row_a'>
         {rowA.map((item,index)=>{
           return (
-            <Product key={index} name={item.product_name} rating={item.rating} img={item.img_url} price={item.price} />
+            <Product key={index} id={item.id} name={item.product_name} rating={item.rating} img={item.img_url} price={item.price} />
           )
         })}
         </div>
@@ -36,7 +36,7 @@ const Home = props => {
         })}
         </div>
         <Container className='poster'>
-         <img alt='sale_poster' src='https://images-eu.ssl-images-amazon.com/images/G/31/img22/Sports/April/Home_CB/pc-stripe.jpg' />
+         <img alt='sale_poster' src='https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/MFW_4/AFpage/Cashback/Eng/CB-PC-2.jpg' />
         </Container>
     </Container>
   )

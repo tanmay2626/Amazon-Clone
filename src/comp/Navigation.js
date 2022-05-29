@@ -8,17 +8,20 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import '../css/Navigation.css'
 import { InputBase } from '@mui/material';
-
-
+import { useStateValue } from '../state/StateProvider'
+import { Link } from 'react-router-dom'
 
 const Navigation = () => {
+
+  const [{ cart }] = useStateValue()
 
   return (
     <Box className='navigation' sx={{ flexGrow: 1 }}>
       <AppBar sx={{ backgroundColor: '#131921', padding: 0 }} className='navigation'  position="static">
         <Toolbar>
+        <Link to='/'>
          <img src='https://github.com/tanmay2626/images/blob/main/amazon-logo-removebg-preview.png?raw=true' alt='logo' />
-         
+        </Link>
          <Box sx={{ marginLeft: 5 , width: 65+'%'}}>
          <InputBase sx={{ padding:1, backgroundColor: 'white' , borderRadius: '3px 0 0 3px' , width: 90+'%', height: 35+'px' }} />
          <IconButton sx={{ backgroundColor: '#E48900' ,marginTop: -0.4,padding: 0 ,borderRadius: '0 3px 3px 0' }}>
@@ -26,16 +29,22 @@ const Navigation = () => {
          </IconButton>
          </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex', width: 30+'%', height: 50+'px' } }}>
-            <Button sx={{ textTransform: 'none' , overflow: 'hidden'}} variant="text"   color="inherit">
+            <Link className='link' to='/signin'>
+            <Button sx={{ textTransform: 'none' , overflow: 'hidden', marginTop: -4}} variant="text"   color="inherit">
             <p><span>Hello Guest</span>, Sign in</p>
             </Button>
-            <Button sx={{ textTransform: 'none' }} variant="text"  color="inherit">
+            </Link>
+            <Link className='link' to='/orders'>
+            <Button sx={{ textTransform: 'none',marginTop: -4 }} variant="text"  color="inherit">
             <p><span>Returns </span>& Orders</p>
             </Button>
-            <IconButton sx={{ textTransform: 'none' }} variant="text" color="inherit">
+            </Link>
+            <Link className='link' to='/cart'>
+            <IconButton  sx={{ marginTop: -5 }} variant="text" color="inherit">
             <ShoppingCartOutlinedIcon sx={{ fontSize: 35, color: '#DDDDDD' }} />
-            <p>Cart</p>
+            <h4>{cart?.length}</h4>
             </IconButton>
+          </Link>
           </Box>
         </Toolbar>
       </AppBar>

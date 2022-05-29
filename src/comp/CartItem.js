@@ -2,8 +2,17 @@ import React from 'react'
 import '../css/Checkout.css'
 import Rating from '@mui/material/Rating';
 import { Button } from '@mui/material';
+import { useStateValue } from '../state/StateProvider'
 
 const CartItem = props => {
+  const [{ cart }, dispatch] = useStateValue()
+
+  const removeFromCart = () =>{
+    dispatch({
+      type: 'REMOVE_FROM_CART',
+      id: props.id
+    })
+  }
 
   return (
     <div className='item-wrap'>
@@ -16,7 +25,7 @@ const CartItem = props => {
         <Rating  name="read-only" value={props.rating} precision={0.5} readOnly />
         </h4>
         <div className='item-remove'>
-        <Button variant="contained" size='small'
+        <Button onClick={removeFromCart} variant="contained" size='small'
         sx={{ color: 'black', textTransform: 'none', backgroundColor: '#FBCB0A' , width: 50+'%' }}>
         Remove from Cart</Button>
         </div>
