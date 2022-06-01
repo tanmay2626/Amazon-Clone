@@ -6,7 +6,8 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useStateValue } from '../state/StateProvider'
 
 const Product = props => {
-  const [{ cart },dispatch] = useStateValue()
+  // eslint-disable-next-line no-empty-pattern
+  const [{},dispatch] = useStateValue()
 
   const addToCart = () =>{
     dispatch({

@@ -13,8 +13,15 @@ import { Link } from 'react-router-dom'
 
 const Navigation = () => {
 
-  const [{ cart }] = useStateValue()
+  const [{ cart, user }, dispatch] = useStateValue()
 
+  const authStatus = () =>{
+    (user) &&  dispatch({
+      type: 'SET_USER',
+      user: null
+    })
+  }
+  
   return (
     <Box className='navigation' sx={{ flexGrow: 1 }}>
       <AppBar sx={{ backgroundColor: '#131921', padding: 0 }} className='navigation'  position="static">
@@ -29,13 +36,13 @@ const Navigation = () => {
          </IconButton>
          </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex', width: 30+'%', height: 50+'px' } }}>
-            <Link className='link' to='/signin'>
-            <Button sx={{ textTransform: 'none' , overflow: 'hidden', marginTop: -4}} variant="text"   color="inherit">
-            <p><span>Hello Guest</span>, Sign in</p>
+            <Link className='link' to={(!user)?'/signin':'/'}>
+            <Button onClick={authStatus} sx={{ textTransform: 'none' , overflow: 'hidden', marginTop: -4}} variant="text"   color="inherit">
+            {(!user)?(<p><span>Hello Guest</span>, Sign in</p>):(<p><span>Hello {user.username}</span>, Sign Out</p>)}
             </Button>
             </Link>
             <Link className='link' to='/orders'>
-            <Button sx={{ textTransform: 'none',marginTop: -4 }} variant="text"  color="inherit">
+            <Button  sx={{ textTransform: 'none',marginTop: -4 }} variant="text"  color="inherit">
             <p><span>Returns </span>& Orders</p>
             </Button>
             </Link>

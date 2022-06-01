@@ -29,6 +29,11 @@
     padding: 10px;
 }
 
+.form-wrap p{
+    color: red;
+    font-size: 0.5rem;
+}
+
 .signin-form label{
     font-size: 0.8rem;
     font-weight: 500;
@@ -43,4 +48,5 @@
 .link{
     text-decoration: none;
 }
+
 

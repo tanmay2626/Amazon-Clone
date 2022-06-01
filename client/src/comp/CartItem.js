@@ -5,7 +5,8 @@ import { Button } from '@mui/material';
 import { useStateValue } from '../state/StateProvider'
 
 const CartItem = props => {
-  const [{ cart }, dispatch] = useStateValue()
+    // eslint-disable-next-line no-empty-pattern
+  const [{}, dispatch] = useStateValue()
 
   const removeFromCart = () =>{
     dispatch({
