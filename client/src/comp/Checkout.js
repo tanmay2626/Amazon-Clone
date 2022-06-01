@@ -8,6 +8,7 @@ import { Button } from '@mui/material';
 import { useStateValue } from '../state/StateProvider'
 
 const Checkout = props => {
+  //Todo - add backend cart and link with account
   const [{ cart }] = useStateValue()
 
   const add_prices = () =>{
