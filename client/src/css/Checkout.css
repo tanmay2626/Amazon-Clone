@@ -1,81 +1,72 @@
 
 .checkout{
-    padding-bottom: 40px;
-}
-
-.poster img{
-    width: 100%;
-    padding: 10px 0 0 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 200px;
 }
 
 .checkout-wrap{
-    display: flex;
+    background-color: white;
+    text-align: left;
+    font-size: 1rem;
+    padding: 5px;
+    width: 80%;
+    margin: 0 auto;
     margin-top: 10px;
 }
 
-.checkout-left{
+.sec{
+    display: flex;
+}
+
+.sec-L{
     display: flex;
     flex-direction: column;
-    flex: 0.69;
-    background-color: white;
-    padding-right: 10px;
+    flex: 0.25;
+    font-size: 0.9rem;
+    padding: 10px;
 }
 
-.checkout-right{
+.sec-R{
     display: flex;
     flex-direction: column;
-    flex: 0.30;
-    margin-left: auto;
-    background-color: white;
-    height: max-content;
-    padding: 0 10px 15px 10px;
-    font-family: 'Varela Round', sans-serif;
-    margin-top: -60px;
+    flex: 0.75;
+    font-size: 0.8rem;
+    padding: 15px;
+    font-weight: 400;
 }
 
-.checkout-check{
-    margin-top: -20px;
-}
-
-.item-wrap{
+.card-details{
     display: flex;
+    width: 45%;
+    color: gray;
+    margin-top: -10px;
 }
 
-.item-left{
+.card-L{
     display: flex;
     flex-direction: column;
-    flex: 0.35;
-    align-items: center;
+    flex: 0.50;
 }
 
-.item-left img{
-    width: 160px;
-    height: 160px;
-    padding: 25px 0 20px 0;
-}
-
-.item-right{
+.card-R{
     display: flex;
     flex-direction: column;
-    flex: 0.65;
-    font-family: 'Varela Round', sans-serif;
+    flex: 0.50;
+    text-align: right;
 }
 
-.item-right h3{
-    font-size: 1rem;
+.proceed{
+    width: 40%;
+    border: solid 1px #DDDDDD;
+    padding: 15px;
+    margin-top: 20px;
 }
 
-.item-right h4{
-    margin-top: -15px;
-    color: red;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
+.proceed h4{
+    margin-top: 0px;
 }
-
-.item-remove{
-    text-align: left;
-    margin-top: -25px;
-}
-
-
 

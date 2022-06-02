@@ -30,6 +30,7 @@ const Navigation = () => {
          <img src='https://github.com/tanmay2626/images/blob/main/amazon-logo-removebg-preview.png?raw=true' alt='logo' />
         </Link>
          <Box sx={{ marginLeft: 5 , width: 65+'%'}}>
+         {/* Todo - fix buttons for 80% zoom */}
          <InputBase sx={{ padding:1, backgroundColor: 'white' , borderRadius: '3px 0 0 3px' , width: 90+'%', height: 35+'px' }} />
          <IconButton sx={{ backgroundColor: '#E48900' ,marginTop: -0.4,padding: 0 ,borderRadius: '0 3px 3px 0' }}>
            <SearchIcon sx={{  color: 'black', padding: 0.35}} />

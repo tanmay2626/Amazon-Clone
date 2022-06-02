@@ -1,0 +1,84 @@
+
+.cart{
+    padding-bottom: 40px;
+}
+
+.poster img{
+    width: 100%;
+    padding: 10px 0 0 0;
+}
+
+.cart-wrap{
+    display: flex;
+    margin-top: 10px;
+}
+
+.cart-left{
+    display: flex;
+    flex-direction: column;
+    flex: 0.69;
+    background-color: white;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+.cart-right{
+    display: flex;
+    flex-direction: column;
+    flex: 0.30;
+    margin-left: auto;
+    background-color: white;
+    height: max-content;
+    padding: 0 10px 15px 10px;
+    font-family: 'Varela Round', sans-serif;
+    margin-top: -60px;
+}
+
+.cart-check{
+    margin-top: -20px;
+}
+
+.item-wrap{
+    display: flex;
+}
+
+.item-left{
+    display: flex;
+    flex-direction: column;
+    flex: 0.35;
+    align-items: center;
+}
+
+.item-left img{
+    width: 120px;
+    height: 120px;
+    padding: 25px 0 20px 0;
+}
+
+.item-right{
+    display: flex;
+    flex-direction: column;
+    flex: 0.65;
+    font-family: 'Roboto', sans-serif;
+}
+
+.item-right h3{
+    font-size: 0.9rem;
+}
+
+.item-right h4{
+    margin-top: -15px;
+    color: red;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+.item-remove{
+    text-align: left;
+    margin-top: -25px;
+}
+
+.link{
+    text-decoration: none;
+}

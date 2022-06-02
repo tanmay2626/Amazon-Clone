@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/Checkout.css'
+import '../css/Cart.css'
 import Rating from '@mui/material/Rating';
 import { Button } from '@mui/material';
 import { useStateValue } from '../state/StateProvider'
