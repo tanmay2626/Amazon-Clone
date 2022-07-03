@@ -4,6 +4,8 @@ const bodyparser = require('body-parser')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
+const stripe = require('stripe')
+('sk_test_51L66RUSIG3JgLYVPiObvaUyFcq82dMpiQ1eXH0uPdALKzNBcgMebMCaomL1gUtdejvkrhTL3ouUva8nfGdokdKtt00f5zkSDa7');
 const app = express()
 
 app.use(bodyparser.urlencoded({ extended : true }))
@@ -57,6 +59,21 @@ app.post('/signin',(req,res)=>{
             res.json({ status : false , message : 'We cannot find an account with that email address' })
         }
     })
+})
+
+app.post('/payments/create', async(req,res)=>{
+    const total = req.query.total
+    
+    const paymentIntent = await stripe.paymentIntents.create({
+        amount: total,
+        currency: 'inr',
+        payment_method_types: ['card'],
+      });
+
+      // If status 201 - OK then send
+      res.status(201).send({
+        clientSecret: paymentIntent.client_secret
+      })
 })
 
 

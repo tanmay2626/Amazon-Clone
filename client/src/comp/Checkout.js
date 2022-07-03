@@ -3,12 +3,11 @@ import '../css/Checkout.css'
 import { Container, Divider } from '@mui/material'
 import CartItem from './CartItem'
 import { useStateValue } from '../state/StateProvider'
-import { Button } from '@mui/material';
-import { Link } from 'react-router-dom'
+import Payment from './Payment'
 
 const Checkout = props => {
 
-    const [{ cart }] = useStateValue()
+    const [{ cart, user }] = useStateValue()
 
     const add_prices = () =>{
       var total=0
@@ -51,12 +50,7 @@ const Checkout = props => {
              <p>Payment Method</p>
             </div>
             <div className='sec-R'>
-            <h4>Card Details</h4>
-             <div className='card-details'>
-             <form>
-               
-             </form>
-            </div>
+            <Payment cartTotal={total} cart={cart} />
             </div>
           </div>
       </Container>

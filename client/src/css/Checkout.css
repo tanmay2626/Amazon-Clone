@@ -59,14 +59,11 @@
     text-align: right;
 }
 
-.proceed{
-    width: 40%;
-    border: solid 1px #DDDDDD;
-    padding: 15px;
-    margin-top: 20px;
+.payment-form{
+    width: 450px;
 }
 
-.proceed h4{
-    margin-top: 0px;
+.payment p{
+    color: red;
 }
 
