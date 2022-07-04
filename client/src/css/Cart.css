@@ -50,8 +50,9 @@
 }
 
 .item-left img{
-    width: 120px;
-    height: 120px;
+    max-width: 170px;
+    max-height: 170px;
+    object-fit: contain;
     padding: 25px 0 20px 0;
 }
 
@@ -81,4 +82,34 @@
 
 .link{
     text-decoration: none;
+}
+
+@media screen and ( max-width: 480px ){
+    .cart-items h2{
+        font-size: 0.8rem;
+    }
+
+    .cart-right{
+        margin-top: 0px;
+        font-size: 0.3rem;
+    }
+
+    .cart-right span{
+        margin-top: 5px;
+        font-size: 0.1rem;
+    }
+
+    .item-left img{
+        max-width: 50px;
+    }
+
+    .item-right h3{
+        font-size: 0.3rem;
+    }
+
+    .item-right h4{
+        font-size: 0.4rem;
+        margin-top: 1px;
+    }
+
 }

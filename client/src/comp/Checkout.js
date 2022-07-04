@@ -19,10 +19,10 @@ const Checkout = props => {
     const total = add_prices()
 
   return (
-    <Container className='checkout'>
+    <div className='checkout'>
      <span>Checkout {'('+cart.length+' items)'}</span>
      <div className='checkout-wrap'>
-      <Container>
+      <div>
           <div className='sec'>
             <div className='sec-L'>
              <p>Delivery Address</p>
@@ -53,9 +53,9 @@ const Checkout = props => {
             <Payment cartTotal={total} cart={cart} />
             </div>
           </div>
-      </Container>
+      </div>
      </div>
-    </Container>
+    </div>
   )
 }
 

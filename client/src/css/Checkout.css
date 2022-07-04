@@ -46,24 +46,26 @@
     margin-top: -10px;
 }
 
-.card-L{
-    display: flex;
-    flex-direction: column;
-    flex: 0.50;
-}
-
-.card-R{
-    display: flex;
-    flex-direction: column;
-    flex: 0.50;
-    text-align: right;
-}
-
 .payment-form{
     width: 450px;
 }
 
 .payment p{
     color: red;
+}
+
+@media screen and ( max-width: 480px ){
+    .sec-L{
+        font-size: 0.7rem;
+        flex: 0.15;
+    }
+
+    .sec-R{
+        flex: 0.85;
+    }
+
+    .payment-form{
+        width: 200px;
+    }
 }
 

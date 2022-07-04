@@ -26,7 +26,7 @@ const Checkout = props => {
         <Container className='poster'>
          <img alt='sale_poster' src='https://images-eu.ssl-images-amazon.com/images/G/31/img22/Sports/April/Home_CB/pc-stripe.jpg' />
         </Container>
-        <Container className='cart-items'>
+        <div className='cart-items'>
         <h2>Your Shopping Cart </h2>
         <div className='cart-wrap'>
          <div className='cart-left'>
@@ -38,7 +38,7 @@ const Checkout = props => {
          </div>
          <div className='cart-right'>
            <h5>Subtotal ({cart.length} items) : ₹{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h5>
-           <FormControlLabel className='cart-check' control={<Checkbox size='small' color='default' />} label="This order contains a gift" />
+           <FormControlLabel control={<Checkbox size='small' color='default' />} label={<span>This order contains a gift</span>} />
            <Link className='link' to='/checkout'>
            <Button variant="contained" size='small'
             sx={{ color: 'black', textTransform: 'none', width: 100+'%',
@@ -48,7 +48,7 @@ const Checkout = props => {
             </Link>
          </div>
         </div>
-        </Container>
+        </div>
     </Container>
   )
 }

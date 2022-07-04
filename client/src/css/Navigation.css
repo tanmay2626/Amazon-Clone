@@ -1,13 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@500&family=Poppins:wght@200;300;400;500&family=Roboto:wght@300;400;500&family=Rubik:wght@300&family=Varela+Round&display=swap');
 
+.navigation-logo{
+    width: 15%;
+    object-fit: contain;
+    text-align: center;
+    display: flex;
+}
 .navigation img{
-    width: 130px;
+    width: 70%;
+    object-fit: contain;
+}
+
+.navigation-search{
+    display: flex;
+    width: 55%;
+}
+
+.navigation-option{
+    width: 10%;
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navigation-cart{
+    width: 10%;
+    height: 80px;
 }
 
 .navigation p{
     font-family: 'Roboto', sans-serif;
     padding: 5px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .navigation span{
@@ -26,4 +51,25 @@
 
 .link:link{
     color: white;
+    text-decoration: none;
+}
+
+@media screen and ( max-width: 480px ){
+    .navigation-logo{
+        margin-left: -10px;
+        width: 20%;
+    }
+    .navigation-search{
+        width: 35%;
+    }
+    .navigation-option{
+        height: 60px;
+        width: 20%;
+    }
+    .navigation p{
+        font-size: 0.2rem;
+    }
+    .navigation h4{
+        font-size: 1.3rem;
+    }
 }

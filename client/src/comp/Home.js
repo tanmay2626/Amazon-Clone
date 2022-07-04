@@ -6,7 +6,7 @@ import Product from './Product'
 
 const Home = props => {
   return (
-    <Container className='home'>
+    <div className='home'>
       {/* Todo - add slider */}
         <Box className='banner'>
             <img alt='banner' src='https://images-eu.ssl-images-amazon.com/images/G/31/img22/HP_Gaming_Acc/Hero/HP_DesktopTallHero_3000x1200._CB623691740_.jpg' />
@@ -38,7 +38,7 @@ const Home = props => {
         <Container className='poster'>
          <img alt='sale_poster' src='https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/MFW_4/AFpage/Cashback/Eng/CB-PC-2.jpg' />
         </Container>
-    </Container>
+    </div>
   )
 }
 
