@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import { Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import "../css/Navigation.css";
@@ -44,19 +43,19 @@ const Navigation = () => {
                 padding: 1,
                 backgroundColor: "white",
                 borderRadius: "3px 0 0 3px",
-                width: 100 + "%",
+                width: 90 + "%",
                 height: 35 + "px",
               }}
             />
             <IconButton
               sx={{
                 backgroundColor: "#E48900",
-                marginTop: -0.4,
+                marginTop: 0,
                 padding: 0,
                 borderRadius: "0 3px 3px 0",
               }}
             >
-              <SearchIcon sx={{ color: "black", padding: 0.35 }} />
+              <SearchIcon sx={{ color: "black", padding: 0.25 }} />
             </IconButton>
           </div>
 
@@ -74,7 +73,7 @@ const Navigation = () => {
             </Link>
           </div>
           <div className="navigation-option">
-            <Link className="link" to="/orders">
+            <Link className="link" to={user? "/orders" : "/signin"}>
               <p>
                 <span>Returns </span>& Orders
               </p>

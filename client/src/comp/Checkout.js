@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/Checkout.css'
-import { Container, Divider } from '@mui/material'
+import { Divider } from '@mui/material'
 import CartItem from './CartItem'
 import { useStateValue } from '../state/StateProvider'
 import Payment from './Payment'
@@ -8,7 +8,7 @@ import Payment from './Payment'
 const Checkout = props => {
 
     const [{ cart, user }] = useStateValue()
-
+  
     const add_prices = () =>{
       var total=0
       cart.forEach(e => {
@@ -39,7 +39,7 @@ const Checkout = props => {
             <div className='sec-R'>
             {cart.map((item,index)=>{
              return (
-              <CartItem key={index} id={item.id} name={item.product_name} rating={item.rating} price={item.price} img={item.product_img} />
+              <CartItem key={index} id={item.id} product_name={item.product_name} rating={item.rating} price={item.price} product_img={item.product_img} />
              )
            })}
             </div>
@@ -50,7 +50,7 @@ const Checkout = props => {
              <p>Payment Method</p>
             </div>
             <div className='sec-R'>
-            <Payment cartTotal={total} cart={cart} />
+            <Payment cartTotal={total} />
             </div>
           </div>
       </div>

@@ -11,17 +11,17 @@ const CartItem = props => {
   const removeFromCart = () =>{
     dispatch({
       type: 'REMOVE_FROM_CART',
-      id: props.id
+      product_id: props.product_id
     })
   }
 
   return (
     <div className='item-wrap'>
       <div className='item-left'>
-        <img alt='product_img' src={props.img} />
+        <img alt='product_img' src={props.product_img} />
       </div>
       <div className='item-right'>
-      <h3>{props.name.slice(0,45)+'...'}</h3>
+      <h3>{props.product_name.slice(0,45)+'...'}</h3>
         <h4>₹{props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}<br/>
         <Rating size='small' name="read-only" value={props.rating} precision={0.5} readOnly />
         </h4>
@@ -30,7 +30,6 @@ const CartItem = props => {
         sx={{ color: 'black', textTransform: 'none', backgroundColor: '#FBCB0A' ,
          width: 90+'%' , ":hover":{ backgroundColor: '#FAC213' },
          ["@media (max-width: 480px)"]: {
-                      // eslint-disable-line no-useless-computed-key
                       fontSize: 2, marginTop : 2,
                     }, 
            }}>

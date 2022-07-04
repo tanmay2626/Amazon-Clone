@@ -10,6 +10,7 @@ import Profile from './comp/Profile';
 import Checkout from './comp/Checkout';
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
+import Orders from './comp/Orders';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path='/' exact element={<Home />} />
         <Route path='/cart' exact element={<Cart />} />
+        <Route path='/orders' exact element={<Orders />} />
         <Route path='/signin' exact element={<SignIn />} />
         <Route path='/register' exact element={<Register />} />
         {/* Todo - Setup Profile page */}

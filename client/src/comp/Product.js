@@ -1,6 +1,6 @@
 import React from 'react'
 import Rating from '@mui/material/Rating';
-import '../css/Home.css'
+import '../css/Product.css'
 import { Button } from '@mui/material';
 import { useStateValue } from '../state/StateProvider'
 
@@ -12,7 +12,7 @@ const Product = props => {
     dispatch({
       type: 'ADD_TO_CART',
       item: {
-        id: props.id,
+        product_id: props.product_id,
         product_name: props.name,
         price: props.price,
         product_img: props.img,

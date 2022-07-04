@@ -55,6 +55,11 @@
 }
 
 @media screen and ( max-width: 480px ){
+
+    .checkout-wrap{
+        width: 90%;
+    }
+
     .sec-L{
         font-size: 0.7rem;
         flex: 0.15;

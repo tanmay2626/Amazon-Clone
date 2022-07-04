@@ -14,14 +14,14 @@ const Home = props => {
         <div className='home_row_a'>
         {rowA.map((item,index)=>{
           return (
-            <Product key={index} id={item.id} name={item.product_name} rating={item.rating} img={item.img_url} price={item.price} />
+            <Product key={index} product_id={item.product_id} name={item.product_name} rating={item.rating} img={item.img_url} price={item.price} />
           )
         })}
         </div>
         <div className='home_row_b'>
         {rowB.map((item,index)=>{
           return (
-            <Product key={index} name={item.product_name} rating={item.rating} img={item.img_url} price={item.price} />
+            <Product key={index} product_id={item.product_id} name={item.product_name} rating={item.rating} img={item.img_url} price={item.price} />
           )
         })}
         </div>
@@ -31,7 +31,7 @@ const Home = props => {
         <div className='home_row_b'>
         {rowC.map((item,index)=>{
           return (
-            <Product key={index} name={item.product_name} rating={item.rating} img={item.img_url} price={item.price} />
+            <Product key={index} product_id={item.product_id} name={item.product_name} rating={item.rating} img={item.img_url} price={item.price} />
           )
         })}
         </div>

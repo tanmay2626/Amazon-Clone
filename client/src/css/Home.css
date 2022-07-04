@@ -28,56 +28,6 @@
     padding: 0 15px 0 15px;
 }
 
-.card-main{
-    background-color: white;
-    z-index: 1;
-    min-width: 100px;
-    max-height: 400px;
-    border-radius: 2px;
-    padding-bottom: 10px;
-}
-
-.card-desc{
-    margin-top: -20px;
-    padding-left: 10px;
-    height: 20%;
-}
-
-.add-btn{
-    float: right;
-    position: absolute;
-}
-
-.card-main h5{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-}
-
-.card-main h4{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    margin-top: -20px;
-}
-
-.card-img img{
-    max-height: 200px;
-    object-fit: contain;
-    margin-top: 10px;
-}
-
-.card-img{
-    display: flex;
-    justify-content: center;
-    height: 55%;
-    margin-top: 0px;
-}
-
-.card-btn{
-    margin-top: 10px;
-    height: 25%;
-    text-align: center;
-}
-
 .poster{
     padding: 10px 0 0 0;
 }
@@ -108,34 +58,5 @@
     margin-right: 0px;
     grid-template-columns: 1fr 1fr;
    }
-
-   .card-main h5{
-    font-size: 0.1rem;
-   }
-
-   .card-main h4{
-    font-size: 0.2rem;
-    margin-top: 0;
-   }
-
-   .card-desc{
-    margin-top: 0;
-    height: 40%;
-   }
-
-   .card-img{
-    height: 40%;
-    margin-top: 0px;
-   }
-
-   .card-btn{
-    margin-top: 5px;
-    height: 20%;
-   }
-
-   .card-img img{
-    width: 100%;
-    max-height: 100px;
-    margin-top: 0px;
-   }
+   
 }

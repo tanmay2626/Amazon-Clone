@@ -3,11 +3,14 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { Button } from '@mui/material';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom'
+import { useStateValue } from '../state/StateProvider'
 
-const Payment = ({ cartTotal, cart }) => {
+const Payment = ({ cartTotal }) => {
   const navigate = useNavigate()
   const stripe = useStripe();
   const elements = useElements();
+  const [{ cart, user  }, dispatch] = useStateValue()
+  const user_id = user._id
 
   const [processing, setProcessing] = useState("")
   const [succeeded, setSucceeded] = useState(false)
@@ -24,22 +27,21 @@ const Payment = ({ cartTotal, cart }) => {
   //For testing card numbers https://stripe.com/docs/testing
   
   useEffect(()=>{
-
     const getClientSecret = async() =>{
       const res = await axios.post(`http://localhost:8000/payments/create?total=${cartTotal*100}`)  
       setClientSecret(res.data.clientSecret)
     }
 
-    getClientSecret()
+    if(cartTotal){
+      getClientSecret()
+    }else{
+      //Todo - setup a failure page
+    }
 
   },[cart])
 
-  console.log(`client secret : ${clientSecret}`);
-
-
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('hello');
     setProcessing(true)
 
     // Using this we will make a dummy payment
@@ -53,9 +55,30 @@ const Payment = ({ cartTotal, cart }) => {
         setSucceeded(true)
         setError(null)
         setProcessing(false)
-        navigate('/')
+        const order_details = {
+          product : cart,
+          transaction_status : paymentIntent.status,
+          transaction_id : paymentIntent.id,
+          billing_amount : paymentIntent.amount,
+          payment_type : paymentIntent.payment_method_types[0],
+          customer_name : user.email,
+          //address
+        }
+        axios.post('/order_placed', { order_details , user_id })
+        .then(res=>{
+          dispatch({
+            type: 'SET_USER',
+            user: res.data
+          })
+        })
+
+        dispatch({
+          type: 'EMPTY_CART',
+        })
+        
+        navigate('/orders')
       }else{
-        // Navigate to Failure Page
+        //Todo - If payment fails navigate to Failure Page
       }
 
     } )

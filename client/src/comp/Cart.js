@@ -8,9 +8,9 @@ import { Button } from '@mui/material';
 import { useStateValue } from '../state/StateProvider'
 import { Link } from 'react-router-dom'
 
-const Checkout = props => {
+const Cart = props => {
   //Todo - add backend cart and link with account
-  const [{ cart }] = useStateValue()
+  const [{ user , cart }] = useStateValue()
 
   const add_prices = () =>{
     var total=0
@@ -20,6 +20,7 @@ const Checkout = props => {
     return total;
   }
   const total = add_prices()
+
 
   return (
     <Container className='cart'>
@@ -32,15 +33,15 @@ const Checkout = props => {
          <div className='cart-left'>
            {cart.map((item,index)=>{
              return (
-              <CartItem key={index} id={item.id} name={item.product_name} rating={item.rating} price={item.price} img={item.product_img} />
+              <CartItem key={index} _id={item.id} product_name={item.product_name} rating={item.rating} price={item.price} product_img={item.product_img} />
              )
            })}
          </div>
          <div className='cart-right'>
            <h5>Subtotal ({cart.length} items) : ₹{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h5>
            <FormControlLabel control={<Checkbox size='small' color='default' />} label={<span>This order contains a gift</span>} />
-           <Link className='link' to='/checkout'>
-           <Button variant="contained" size='small'
+           <Link className='link' to={user?'/checkout':'/signin'}>
+           <Button variant="contained" size='small' disabled={cart.length===0?true:false}
             sx={{ color: 'black', textTransform: 'none', width: 100+'%',
             backgroundColor: '#FBCB0A', marginTop: 2 , ":hover":{ backgroundColor: '#FAC213' }}}>
                 Proceed to Buy
@@ -53,4 +54,4 @@ const Checkout = props => {
   )
 }
 
-export default Checkout
+export default Cart
