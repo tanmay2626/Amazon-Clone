@@ -10,3 +10,9 @@ For testing stripe [ Dummy Cards ]:
   Card Number : 4242424242424242
 - Failed Payment 
   Card Number : 4000000000000002
+  
+Demonstration :
+
+
+https://user-images.githubusercontent.com/87329832/177347447-3f9084d3-a729-4332-93f8-be59a098f367.mp4
+
