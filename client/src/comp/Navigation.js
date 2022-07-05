@@ -31,7 +31,7 @@ const Navigation = () => {
           <div className="navigation-logo">
             <Link to="/">
               <img
-                src="https://github.com/tanmay2626/images/blob/main/amazon-logo-removebg-preview.png?raw=true"
+                src="https://raw.githubusercontent.com/tanmay2626/Amazon-Clone/master/client/public/amazon-white.png?token=GHSAT0AAAAAABWGUSFACUL35T5DYYRC4UNUYWECFFQ"
                 alt="logo"
               />
             </Link>
