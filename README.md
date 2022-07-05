@@ -1,6 +1,6 @@
 # Amazon-Clone
 
-This is Amazon Website Clone made using React, Nodes.js, MongoDB and Mongoose. For UI design Material UI is used. It's main features are :
+This is Amazon Website Clone is Full Stack Web Application made using React, Nodes.js, MongoDB and Mongoose. For UI design Material UI is used. It's main features are :
 - Payment using Stripe
 - Encrypted Authentication 
 - Smooth User data handling with database using React Context
