@@ -11,9 +11,9 @@ import { useStateValue } from "../state/StateProvider";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
-  const [{ cart, user }, dispatch] = useStateValue();
+  const [{ cart, user }, dispatch ] = useStateValue();
 
-  const authStatus = () => {
+  const signOut = () => {
     user &&
       dispatch({
         type: "SET_USER",
@@ -59,21 +59,23 @@ const Navigation = () => {
             </IconButton>
           </div>
 
-          <div className="navigation-option">
+          <div onClick={signOut} className="navigation-option">
             <Link className="link" to={!user ? "/signin" : "/"}>
               {!user ? (
                 <p>
-                  <span>Hello Guest</span>, Sign in
+                  <span>Hello Guest</span>
+                  , Sign in
                 </p>
               ) : (
                 <p>
-                  <span>Hello {user.username}</span>, Sign Out
+                  <span>Hello {user.username}</span>
+                  <span className="link-span">, Sign Out</span>
                 </p>
               )}
             </Link>
           </div>
           <div className="navigation-option">
-            <Link className="link" to={user? "/orders" : "/signin"}>
+            <Link className="link" to={user ? "/orders" : "/signin"}>
               <p>
                 <span>Returns </span>& Orders
               </p>
@@ -87,8 +89,7 @@ const Navigation = () => {
                   sx={{
                     fontSize: 45,
                     color: "#DDDDDD",
-                    ["@media (max-width: 480px)"]: {
-                      // eslint-disable-line no-useless-computed-key
+                    "@media (max-width: 480px)": {
                       fontSize: 20,
                     },
                   }}
