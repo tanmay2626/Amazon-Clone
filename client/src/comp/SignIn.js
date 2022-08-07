@@ -59,7 +59,7 @@ const SignIn = (props) => {
         <div className="logo">
           <img
             alt="logo"
-            src="https://github.com/tanmay2626/images/blob/main/download__1_-removebg-preview.png?raw=true"
+            src="https://raw.githubusercontent.com/tanmay2626/Amazon-Clone/master/client/public/amazon-black.png?token=GHSAT0AAAAAABWGUSFBT7L3TK5Q4DZL7D3MYWECEEA"
           />
         </div>
         <div className="signin-form">
