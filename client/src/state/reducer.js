@@ -44,3 +44,12 @@ const reducer = (state,action) =>{
 }
 
 export default reducer
+
+// const [{ cart, user }, dispatch ] = useStateValue();
+
+// const signOut = () => {
+//   user &&
+//     dispatch({
+//       type: "SET_USER",
+//       user: null,
+//     });
