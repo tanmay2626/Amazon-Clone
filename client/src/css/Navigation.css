@@ -46,6 +46,11 @@
 
 @media screen and ( max-width: 480px ){
     
+    .navigation{
+        position: fixed;
+        z-index: 999;
+    }
+
     .navigation-logo{
         width: 70%;
         margin-bottom: 5px;
