@@ -28,7 +28,7 @@ const navItems = [
   },
   {
     name: "Search",
-    link: null,
+    link: "/search",
   },
   {
     name: "Cart",
