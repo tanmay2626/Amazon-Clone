@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../css/Auth.css";
 import { Container } from "@mui/material";
-import { Button } from "@mui/material";
+import { Button, Divider } from "@mui/material";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = (props) => {
   const navigate = useNavigate();
@@ -104,6 +104,9 @@ const Register = (props) => {
             </form>
           </div>
         </div>
+        <Divider sx={{ marginTop: 2, fontSize: 2, color: "gray" }}>
+          Already an user? <Link to="/signin">Login</Link>
+        </Divider>
       </div>
     </Container>
   );
