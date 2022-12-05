@@ -1,7 +1,6 @@
 
 .signin-box{
-    width: 350px;
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
 }
 
@@ -47,6 +46,13 @@
 
 .link{
     text-decoration: none;
+}
+
+@media screen and ( max-width: 480px ){
+    .logo img{
+        padding-top: 100px;
+        width: 150px;
+    }
 }
 
 

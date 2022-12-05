@@ -6,13 +6,14 @@ const bcrypt = require("bcrypt");
 const stripe = require("stripe")(
   "sk_test_51L66RUSIG3JgLYVPiObvaUyFcq82dMpiQ1eXH0uPdALKzNBcgMebMCaomL1gUtdejvkrhTL3ouUva8nfGdokdKtt00f5zkSDa7"
 );
+const port = process.env.PORT || 8000
 const app = express();
 
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(bodyparser.json());
 
-mongoose.connect("mongodb://localhost:27017/amazondb");
+mongoose.connect("mongodb+srv://twaykar8:bobo2626@cluster0.kpikg.mongodb.net/amazondb?retryWrites=true&w=majority");
 
 const ProductSchema = new mongoose.Schema({
   product_id: { type: String, require: true },
@@ -132,6 +133,6 @@ app.post("/order_placed", (req, res) => {
   });
 });
 
-app.listen(8000, () => {
-  console.log("Server running on port 8000");
+app.listen(port, () => {
+  console.log("Server running on port "+port);
 });

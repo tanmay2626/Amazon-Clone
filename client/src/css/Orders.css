@@ -67,6 +67,10 @@
 
 @media screen and ( max-width: 480px ){
 
+    .orders-head{
+        padding-top: 55px;
+    }
+
     .orders-wrap{
         width: 90%;
     }

@@ -9,7 +9,9 @@ const Orders = (props) => {
 
   return (
     <div className="orders">
-      <h2>Order History</h2>
+    <div className="orders-head">
+    <h2>Order History</h2>
+    </div>
       <div className="orders-wrap">
         {user.orders.map((orders) => {
           return (

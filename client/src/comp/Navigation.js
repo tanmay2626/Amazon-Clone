@@ -27,10 +27,6 @@ const navItems = [
     link: "/",
   },
   {
-    name: "Search",
-    link: "/search",
-  },
-  {
     name: "Cart",
     link: "/cart",
   },
@@ -45,7 +41,15 @@ const navItems = [
 ];
 
 const Navigation = (props) => {
-  const [{ cart, user }] = useStateValue();
+  const [{ cart, user }, dispatch] = useStateValue();
+
+  const signOut = () => {
+    user &&
+      dispatch({
+        type: "SET_USER",
+        user: null,
+      });
+  };
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -57,7 +61,9 @@ const Navigation = (props) => {
   const drawer = (
     <Box className="drawer" onClick={handleDrawerToggle}>
       <Stack
-        sx={{ padding: "0 5px 0 5px" }}
+        sx={{ padding: "0 5px 0 5px",
+        backgroundImage: `url(${"https://cdn.pixabay.com/photo/2017/02/18/01/26/background-2076334__340.jpg"})`
+         }}
         direction="row"
         alignItems="center"
         gap={1}
@@ -89,6 +95,11 @@ const Navigation = (props) => {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem sx={{ padding: "0 5px 0 15px" }} disablePadding>
+            <ListItemButton onClick={signOut} >
+              <ListItemText primary="Sign Out"/>
+            </ListItemButton>
+          </ListItem>
       </List>
     </Box>
   );
@@ -183,7 +194,7 @@ const Navigation = (props) => {
             <IconButton
               sx={{ height: 100 + "%" }}
               component={Link}
-              to="/cart"
+              to={user ? "/cart" : "signin"}
               variant="text"
               color="inherit"
             >
