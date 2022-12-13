@@ -56,8 +56,16 @@
 
 @media screen and ( max-width: 480px ){
 
+    .checkout{
+        margin-top: 0px;
+    }
+
     .checkout-wrap{
         width: 90%;
+    }
+
+    .checkout-heading{
+        padding-top: 65px;
     }
 
     .sec-L{

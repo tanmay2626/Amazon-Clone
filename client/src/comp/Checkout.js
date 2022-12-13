@@ -19,7 +19,9 @@ const Checkout = (props) => {
 
   return (
     <div className="checkout">
+    <div className="checkout-heading">
       <span>Checkout {"(" + cart.length + " items)"}</span>
+      </div>
       <div className="checkout-wrap">
         <div>
           <div className="sec">
